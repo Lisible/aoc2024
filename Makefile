@@ -1,8 +1,12 @@
 CFLAGS = -Wall -Wextra -pedantic
+PROFILE ?= 1
 ifeq ($(DEBUG), 1)
 	CFLAGS += -g
 else
 	CFLAGS += -O2
+endif
+ifeq ($(PROFILE), 1)
+	CFLAGS += -DPROFILING=1
 endif
 
 SRC = $(wildcard src/*.c)
