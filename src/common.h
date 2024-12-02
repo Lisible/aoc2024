@@ -1,5 +1,6 @@
 #ifndef COMMON_H
 #define COMMON_H
+#include <stdio.h>
 #ifdef PROFILING
 #include <time.h>
 #ifdef  __x86_64__
